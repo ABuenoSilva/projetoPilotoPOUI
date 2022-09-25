@@ -1,0 +1,33 @@
+
+  <div class="po-text-center">
+    <div class="po-font-subtitle">
+      Por favor efetue o login para acesso aos processos!
+    </div>
+    <br>
+    <po-button p-label="Fazer login" (p-click)="openModal()"> </po-button>
+  </div>
+
+  <po-modal [p-hide-close]="true" p-size="auto" p-title="Confirm your identity" [p-primary-action]="onLogin" [p-secondary-action]="onCancel">
+    <po-login
+      name="userLogin"
+      [(ngModel)]="userLogin"
+      p-clean
+      p-label="User"
+      [p-maxlength]="40"
+      p-placeholder="domain\user"
+      p-required
+    >
+    </po-login>
+
+    <po-password
+      name="userPassword"
+      [(ngModel)]="userPassword"
+      p-clean
+      p-label="Password"
+      p-placeholder="Enter your password"
+      p-required
+    >
+    </po-password>
+  </po-modal>
+
+
