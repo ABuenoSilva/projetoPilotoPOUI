@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
 import { AuthService } from './core/auth/auth.service';
-import { AuthGuardService } from './core/guard/auth-guard.service';
+import { AuthGuardService } from './core/guard/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';

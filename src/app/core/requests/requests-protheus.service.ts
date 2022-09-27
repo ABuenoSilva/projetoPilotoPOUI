@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
-import { ProtheusLoginSucess } from "../requests/requests-model";
+import { ProtheusLoginSucess } from "./requests.model";
 
 @Injectable(
   {providedIn: 'root'}

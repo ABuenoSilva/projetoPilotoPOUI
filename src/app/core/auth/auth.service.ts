@@ -12,7 +12,8 @@ type userStruct = {
 
 @Injectable()
 export class AuthService {
-  private isLogged = true; //false;
+
+  private isLogged = false;
   private loggedUser: userStruct = { userCode: '', userName: '', userRoles: [{roleCode:''}]};
   constructor(private router: Router, private requestsProtheusService: RequestProtheusService){}
 
@@ -46,6 +47,7 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
+    console.log('atenticando', this.isLogged);
     return this.isLogged;
   }
 
@@ -65,6 +67,8 @@ export class AuthService {
     this.isLogged = false;
     this.loggedUser = { userCode: '', userName: '', userRoles: [{roleCode:''}]};
     //Roteamento "dummy" para o caso de já estar na home e forçar o refresh
+    console.log('isLogged');
+    console.log(this.isLogged);
     this.router.navigateByUrl('/dummy', {skipLocationChange: true}).then(()=>
       this.router.navigate(['/']));
 
